@@ -1,0 +1,9 @@
+Starting audit...
+[ERROR] /mnt/c/Users/poana/Desktop/tema3POO/src/cachingSystem/classes/LRUCache.java:14: First sentence should end with a period. [JavadocStyle]
+[ERROR] /mnt/c/Users/poana/Desktop/tema3POO/src/cachingSystem/classes/LRUCache.java:32: First sentence should end with a period. [JavadocStyle]
+[ERROR] /mnt/c/Users/poana/Desktop/tema3POO/src/cachingSystem/classes/ObservableFIFOCache.java:30: First sentence should end with a period. [JavadocStyle]
+[ERROR] /mnt/c/Users/poana/Desktop/tema3POO/src/cachingSystem/classes/TimeAwareCache.java:13: Comment matches to-do format 'TODO:'. [TodoComment]
+[ERROR] /mnt/c/Users/poana/Desktop/tema3POO/src/cachingSystem/classes/TimeAwareCache.java:24: Comment matches to-do format 'TODO:'. [TodoComment]
+[ERROR] /mnt/c/Users/poana/Desktop/tema3POO/src/cachingSystem/classes/TimeAwareCache.java:34: Comment matches to-do format 'TODO:'. [TodoComment]
+Audit done.
+Checkstyle ends with 6 errors.

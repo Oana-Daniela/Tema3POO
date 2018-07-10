@@ -1,0 +1,32 @@
+Puisor Oana-Daniela
+321 CD
+	Tema 3 
+
+ 	Pentru aceasta tema am implementat sistemul de Caching de tip FIFO
+ si LRU.
+	Pentru fiecare tip am realizat metodele marcate cu TODO.In cazul FIFO am 
+implementat clasa ObservableFifoCache, care se afla intr-o relatie de compunere cu
+clasa FIFOCache data. Pentru metoda de get avem doua optiuni
+pentru listener, Miss(nu este in cache) sau Hit(este in cache),iar in cazul lui put am 
+avut grija ca odata adaugat un fisier sa fie eliminat si cel mai vechi introdus, 
+daca nu mai avem loc in cache (am apelat clearStaleEntries).
+
+	Pentru cazul LRU am procedat asemanator.M-am folosit de lista dublu 
+inlantuita pentru a grupa fisierele in ea.
+
+	La partea de implementare a listener-ului KeyStatsListener am apelat
+ pentru fiecare eveniment in parte la un HashMap. Am initializat 3 tabele de
+ dispersie fiecare avand o cheie(cale a unui fisier) si un intreg, 
+reprezentand ori numarul de hits, de miss sau updates.Pentru a afla cheile 
+cele mai solicitate,le-am copiat intr-o lista, iar ulterior am lucrat 
+pe ea pentru a afla cheile corespunzatoare.Am  sortat dupa numarul de 
+hits/misses/updates cu ajutorul comparatorului.In final am creat sublista
+cu primele n chei solicitate.Metoda getTop este universala pentu 
+toate metodele cerute(getTopHitKeys,getTopUpdates,getTopMissedKeys).  
+
+	BroadcastListener nu face decat sa grupeze si sa transmita catre alti listeneri,ei fiind 
+observatori, trebuie notificati la fiecare schimbare din sistemul de 
+Cache.In BroadCastListener adaug listenerii intr-o lista.
+
+	StatsListener tine evidenta la numarul de miss, de hit si de 
+update pentru un Cache.
